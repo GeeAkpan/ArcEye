@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07080d">
+  <title>ARGUS EYE ($EYE) — ALL EYES ON ARC</title>
+  <meta name="description" content="Meet ARGUS EYE ($EYE), the omnipresent sentinel of the ARC Blockchain. 100% community-driven memecoin on Arc with 0% tax. All eyes on Arc.">
+  <meta property="og:title" content="ARGUS EYE ($EYE) — ALL EYES ON ARC">
+  <meta property="og:description" content="The watcher of the chain. 100% community memecoin on ARC with 0% tax. Every block, every transaction, all eyes are on Arc.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/eye-token.png">
+  
+  <!-- Google Fonts: Syne, Space Grotesk, JetBrains Mono, Barlow Condensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800;900&family=Barlow+Condensed:ital,wght@1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" type="module" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+  
+  <!-- Ambient background glow particles / aura -->
+  <div class="ambient-glow glow-top" id="glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-mid" id="glow-mid" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" id="glow-bottom" aria-hidden="true"></div>
+
+  <!-- Floating Eye Background Particles Layer -->
+  <div class="floating-eyes-bg" id="floating-eyes-bg" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <header class="header" id="site-header">
+      <a class="wordmark" href="#" aria-label="EYE home">
+        <span class="wordmark-icon">
+          <img src="assets/eye-token.png" alt="EYE token" class="nav-token-img">
+        </span>
+        EYE
+      </a>
+      <nav aria-label="Main navigation" id="main-nav">
+        <a class="nav-link" href="#oracle" data-nav="oracle">THE ORACLE</a>
+        <a class="nav-link" href="#memes" data-nav="memes">MEME VAULT</a>
+        <a class="nav-link" href="#sentinel" data-nav="sentinel">SENTINEL</a>
+        <a class="nav-link" href="#lore" data-nav="lore">THE LORE</a>
+        <a class="nav-link" href="#tokenomics" data-nav="tokenomics">TOKENOMICS</a>
+        <a class="nav-link x-nav" href="https://x.com/i/communities/2032044862334501356" target="_blank" rel="noopener noreferrer">X COMMUNITY <span aria-hidden="true">↗</span></a>
+        <a class="button button-small button-outline" href="https://dexscreener.com/arc/0x9c6bb77e2af3790e1389c2f8a07084d97b6e0127abadb0d86393b082c8d134f6" target="_blank" rel="noopener noreferrer" id="nav-buy-btn">
+          <span>BUY $EYE</span><span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </header>
+
+    <!-- High-Energy Meme Ticker Marquee -->
+    <div class="meme-marquee-wrap" aria-hidden="true">
+      <div class="meme-marquee">
+        <span>👁️ ALL EYES ON ARC</span>
+        <span>🔥 0% TAX SO YOUR EYES DON'T CRY</span>
+        <span>👁️ 100 EYES · 0 BRAINCELLS NEEDED TO HODL</span>
+        <span>⚡ 100% COMMUNITY OWNED SENTINEL</span>
+        <span>👀 SLEEP IS TEMPORARY · ARC IS ETERNAL</span>
+        <span>🚀 CERTIFIED UNBLINKING GIGACHAD</span>
+        <span>👁️ ALL EYES ON ARC</span>
+        <span>🔥 0% TAX SO YOUR EYES DON'T CRY</span>
+        <span>👁️ 100 EYES · 0 BRAINCELLS NEEDED TO HODL</span>
+        <span>⚡ 100% COMMUNITY OWNED SENTINEL</span>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero-section" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true">
+          <div class="eye-interactive-wrapper" id="hero-eye-container">
+            <img src="assets/eye-token.png" alt="ARGUS EYE Omnipresent Token" width="1000" height="1000" class="hero-main-token" fetchpriority="high">
+            <div class="token-glow-halo"></div>
+            <div class="interactive-pupil-tracker" id="pupil-tracker"></div>
+          </div>
+          <div class="art-shade"></div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow reveal-up">ARC BLOCKCHAIN’S OMNIPRESENT SENTINEL</p>
+          <h1 id="hero-title" class="reveal-up stagger-1">EYE<span class="title-period">.</span></h1>
+          <h2 class="hero-statement reveal-up stagger-2">ALL EYES ON ARC.<br><span>WITNESS THE ASCENT.</span></h2>
+          <p class="hero-description reveal-up stagger-3">The all-seeing watcher of the newly forged ARC chain.<br>Hold $EYE. 100% community-driven sentinel of Arc.</p>
+          
+          <div class="hero-actions reveal-up stagger-4">
+            <a class="button button-primary" href="https://dexscreener.com/arc/0x9c6bb77e2af3790e1389c2f8a07084d97b6e0127abadb0d86393b082c8d134f6" target="_blank" rel="noopener noreferrer">
+              <span>TRADE ON DEXSCREENER</span><span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-quiet" href="#oracle">
+              <span>CONSULT THE ORACLE</span><span class="arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="contract reveal-up stagger-4">
+            <span class="contract-label">ARC CA</span>
+            <button class="copy-address" type="button" aria-label="Copy EYE token contract address" data-address="0xc87bbFbf5D15b3E1230b5d37cfd43A03d228c79E">
+              <span class="short-address">0xc87bbF…c79E</span>
+              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <rect x="7" y="7" width="10" height="10" rx="1.5"/>
+                <path d="M13 4H4a1 1 0 0 0-1 1v9"/>
+              </svg>
+            </button>
+            <a class="contract-explorer" href="https://dexscreener.com/arc/0x9c6bb77e2af3790e1389c2f8a07084d97b6e0127abadb0d86393b082c8d134f6" target="_blank" rel="noopener noreferrer" aria-label="View on DexScreener">
+              DEXSCREENER ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-caption reveal-right">
+          <span class="caption-line"></span>
+          <span>THE GAZE NEVER SLEEPS.<br>ALL EYES ON ARC.</span>
+        </div>
+      </section>
+
+      <!-- SENTINEL STRIP -->
+      <section class="reward-strip reveal-scale" id="sentinel" aria-label="EYE sentinel metrics">
+        <div class="strip-lead">
+          <span class="strip-star" aria-hidden="true">👁</span>
+          <span>HOLD THE EYE.<br><strong>COMMAND THE ARC.</strong></span>
+        </div>
+        <div class="strip-stat">
+          <span class="stat-label">THE PAIR</span>
+          <strong>EYE <span>/</span> ARGUS</strong>
+        </div>
+        <div class="strip-stat">
+          <span class="stat-label">TAX RATE</span>
+          <strong>0% BUY / 0% SELL</strong>
+        </div>
+        <div class="strip-stat strip-stat-extra">
+          <span class="stat-label">ORACLE PROTOCOL</span>
+          <strong>UNISWAP V4 ON ARC</strong>
+        </div>
+        <a class="strip-link" href="#oracle">THE ORACLE <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <!-- THE SACRED MEME VAULT & STARE CLICKER -->
+      <section class="meme-vault-section" id="memes" aria-labelledby="meme-vault-title">
+        <div class="section-heading reveal-up">
+          <p class="eyebrow">100 EYES · 0 BRAINCELLS NEEDED</p>
+          <h2 id="meme-vault-title">THE MEME VAULT. <span>UNBLINKING VIBES.</span></h2>
+          <p class="section-sub">Why close two eyes when you have a hundred watching the green candles?</p>
+        </div>
+
+        <!-- 3-Column Meme Gallery -->
+        <div class="meme-grid">
+          <!-- Meme 1 -->
+          <div class="meme-card reveal-up stagger-1">
+            <div class="meme-img-wrap">
+              <img src="assets/meme-chad.jpg" alt="Chad Eye Mascot with gold chains and sunglasses" loading="lazy">
+              <span class="meme-tag">CHAD SENTINEL</span>
+            </div>
+            <div class="meme-body">
+              <h3>CHAD EYE</h3>
+              <p>"Why blink when you can just buy more $EYE and watch the green candles print on Arc?"</p>
+              <div class="meme-meta">
+                <span>STARE LEVEL: 100/100</span>
+                <span class="meme-chip">GIGACHAD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meme 2 -->
+          <div class="meme-card reveal-up stagger-2">
+            <div class="meme-img-wrap">
+              <img src="assets/meme-charts.jpg" alt="Hyper-focused eye creature looking at 10 green candle screens" loading="lazy">
+              <span class="meme-tag">CHART WATCHER</span>
+            </div>
+            <div class="meme-body">
+              <h3>CHART VOYEUR</h3>
+              <p>"Doctor said to stop staring at charts 24/7. So I grew 98 more eyes for maximum coverage."</p>
+              <div class="meme-meta">
+                <span>GREEN CANDLES: ONLY UP</span>
+                <span class="meme-chip">HYPER-FOCUS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meme 3 -->
+          <div class="meme-card reveal-up stagger-3">
+            <div class="meme-img-wrap">
+              <img src="assets/meme-coffee.jpg" alt="Cute multi-eyed orb sipping coffee with laser eyes shooting up" loading="lazy">
+              <span class="meme-tag">LASER GAZE</span>
+            </div>
+            <div class="meme-body">
+              <h3>COFFEE & LASERS</h3>
+              <p>"No sleep in the Pantheon. Only espresso, green candles, and laser eyes on ARC."</p>
+              <div class="meme-meta">
+                <span>SLEEP: OPTIONAL</span>
+                <span class="meme-chip">ALL EYES ON ARC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Stare-to-Earn / Clicker Mini Game -->
+        <div class="stare-clicker-box reveal-scale">
+          <div class="stare-info">
+            <span class="stare-badge">INTERACTIVE GAZE TRANSMITTER</span>
+            <h3>STARE INTO THE ARC</h3>
+            <p>Click the Eye to transmit your gaze to the blockchain. Never blink, stay based.</p>
+            <div class="stare-rank" id="stare-rank">RANK: NOVICE GAZER 👁️</div>
+          </div>
+          
+          <div class="stare-action-zone">
+            <button class="stare-btn" id="stare-btn" type="button" aria-label="Stare at Arc and increase gaze counter">
+              <div class="stare-btn-inner">
+                <img src="assets/eye-token.png" alt="Clickable Eye Token" class="stare-token-img">
+                <span class="stare-pulse-ring"></span>
+              </div>
+            </button>
+            <div class="stare-count-wrap">
+              <span class="stare-label">TOTAL EYE GAZES TRANSMITTED</span>
+              <strong class="stare-counter" id="stare-counter">142,890</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE ORACLE: ON-CHAIN DIVINATION & TELEMETRY TERMINAL -->
+      <section class="market-section oracle-section" id="oracle" aria-labelledby="oracle-title">
+        <div class="market-heading oracle-heading reveal-up">
+          <div>
+            <div class="oracle-tag">
+              <span class="oracle-orb-dot"></span>
+              <span>THE ALL-SEEING ORACLE OF ARC</span>
+            </div>
+            <h2 id="oracle-title">THE ORACLE, <span>SEES ALL.</span></h2>
+          </div>
+          <div class="sync fresh oracle-sync">
+            <span id="sync-dot"></span>
+            <span id="sync-status" role="status">Oracle Divining Arc Block Feed · Live</span>
+            <button id="refresh-data" aria-label="Re-divine oracle data" type="button" title="Rescan oracle">↻</button>
+          </div>
+        </div>
+
+        <!-- Oracle Prophecy Status Bar -->
+        <div class="oracle-status-bar reveal-up stagger-1">
+          <div class="oracle-chip">
+            <span class="chip-label">ORACLE STATUS</span>
+            <strong class="chip-value text-green"><span class="pulse-ring"></span> AWAKE & ALL-SEEING</strong>
+          </div>
+          <div class="oracle-chip">
+            <span class="chip-label">NATIVE ORACLE PRICE</span>
+            <strong class="chip-value" id="native-price">0.001762 ARGUS</strong>
+          </div>
+          <div class="oracle-chip">
+            <span class="chip-label">DIVINATION POOL</span>
+            <strong class="chip-value text-purple">0x9c6b…34f6</strong>
+          </div>
+          <div class="oracle-chip">
+            <span class="chip-label">SACRED CHAIN</span>
+            <strong class="chip-value text-yellow">ARC MAINNET</strong>
+          </div>
+        </div>
+
+        <div class="market-grid oracle-grid">
+          <!-- Left Oracle Divination Terminal (Visual Price Chart) -->
+          <div class="chart-panel oracle-chart-panel reveal-left stagger-2">
+            <div class="oracle-aura-overlay" aria-hidden="true">
+              <div class="oracle-gaze-ray"></div>
+            </div>
+
+            <div class="price-row">
+              <div>
+                <span class="stat-label">DIVINED VALUE // EYE / USD</span>
+                <strong id="token-price" class="big-price">$0.00003868</strong>
+                <span id="token-change" class="price-change positive">+1,360% · 24h</span>
+              </div>
+              <div class="timeframes" role="group" aria-label="Chart interval">
+                <button type="button" data-interval="m5" aria-pressed="false">5m</button>
+                <button type="button" data-interval="h1" aria-pressed="false">1h</button>
+                <button type="button" data-interval="h6" aria-pressed="false">6h</button>
+                <button type="button" data-interval="h24" aria-pressed="true">24h</button>
+              </div>
+            </div>
+
+            <div class="chart-wrap" id="chart-wrap" tabindex="0" role="group" aria-label="The Oracle interactive price vision chart. Hover to inspect divination points.">
+              <svg id="price-chart" viewBox="0 0 800 225" role="img" aria-label="EYE price chart"></svg>
+              <div class="chart-message" id="chart-message"></div>
+              <div class="chart-tooltip" id="chart-tooltip" aria-live="polite"></div>
+            </div>
+
+            <div class="chart-meta">
+              <span id="chart-caption">USD close price · 24-hour timeframe</span>
+              <span id="chart-range">Divined with DexScreener Arc Feed</span>
+            </div>
+
+            <div class="market-stats">
+              <div>
+                <span class="stat-label" id="market-cap-label">CHAIN VALUATION (FDV)</span>
+                <strong id="market-cap">$37.80K</strong>
+              </div>
+              <div>
+                <span class="stat-label">DIVINED VOLUME (24H)</span>
+                <strong id="market-volume">$185.32K</strong>
+              </div>
+              <div>
+                <span class="stat-label">CHAIN REVELATIONS</span>
+                <strong id="holder-count">3,246 txs</strong>
+              </div>
+              <div>
+                <span class="stat-label">SANCTUARY LIQUIDITY</span>
+                <strong id="arc-price">$14.17K</strong>
+              </div>
+            </div>
+
+            <div class="market-provenance">
+              <div class="prov-links">
+                <a href="https://dexscreener.com/arc/0x9c6bb77e2af3790e1389c2f8a07084d97b6e0127abadb0d86393b082c8d134f6" target="_blank" rel="noopener noreferrer" class="prov-link">DexScreener Pool: 0x9c6b...34f6 ↗</a>
+                <a href="https://argus.world/token/0xc87bbFbf5D15b3E1230b5d37cfd43A03d228c79E" target="_blank" rel="noopener noreferrer" class="prov-link">Argus World Portal ↗</a>
+              </div>
+              <span id="holders-time">Pooled Sanctuary Reserves: 203.25M EYE / 287.26K ARGUS</span>
+              <span id="valuation-note">Verified CA: 0xc87bbFbf5D15b3E1230b5d37cfd43A03d228c79E</span>
+            </div>
+          </div>
+
+          <!-- Right Oracle Telemetry & Sentinel Sanctuary -->
+          <aside class="payout-panel oracle-sanctuary-panel reveal-right stagger-2" aria-labelledby="oracle-telemetry-title">
+            <div class="payout-heading">
+              <span class="eyebrow" id="oracle-telemetry-title">ORACLE SENTINEL TELEMETRY</span>
+              <span class="payout-currency">ARC MAINNET</span>
+            </div>
+            
+            <span class="payout-subtitle">WATCHER UPTIME</span>
+            <div class="countdown" id="oracle-uptime">100%</div>
+            <p class="countdown-state" id="countdown-state">Unblinking on-chain monitoring · every block</p>
+
+            <dl class="payout-facts">
+              <div>
+                <dt>CIRCULATING SUPPLY</dt>
+                <dd>
+                  <span id="pending-usd">1,000,000,000</span>
+                  <small id="pending-arc">100% Circulating $EYE</small>
+                </dd>
+              </div>
+              <div>
+                <dt>DIVINED SWAP ACTIVITY</dt>
+                <dd id="eligible-holders">2,031 buys / 1,215 sells</dd>
+              </div>
+              <div>
+                <dt>POOLED SANCTUARY SUPPLY</dt>
+                <dd id="pooled-supply">
+                  <span>203.25M EYE</span>
+                  <small>20.32% in LP</small>
+                </dd>
+              </div>
+              <div>
+                <dt>PROTOCOL FEE</dt>
+                <dd id="holder-share">0.0% TAX</dd>
+              </div>
+            </dl>
+
+            <div class="fee-box">
+              <div>
+                <span>BUY TAX</span>
+                <strong id="buy-tax">0%</strong>
+              </div>
+              <div>
+                <span>SELL TAX</span>
+                <strong id="sell-fee">0%</strong>
+              </div>
+            </div>
+
+            <p class="module-note" id="module-note">
+              ARGUS EYE operates with 0% tax for friction-free community trading. Liquidity permanently secured in Uniswap v4 on ARC.
+            </p>
+            <p class="reward-sync" id="rewards-time">
+              The Oracle is continuously synchronized with Arc Mainnet
+            </p>
+          </aside>
+        </div>
+
+        <!-- Live Oracle Sight Stream (Swap Telemetry Logs) -->
+        <div class="payout-history oracle-logs reveal-up stagger-3">
+          <div class="history-intro">
+            <div class="hud-indicator">
+              <span class="live-pulse" aria-hidden="true"></span>
+              <p class="eyebrow">ARC SWAP TELEMETRY</p>
+            </div>
+            <h3>LIVE ORACLE SIGHT LOGS</h3>
+            <p><strong id="paid-arc">3,246+</strong> on-chain transactions witnessed by Argus Eye</p>
+            <span id="payout-history-state">Live intercepted on-chain DEX activity on Arc</span>
+          </div>
+          <div class="history-list" id="history-list" aria-label="Recent oracle swap stream">
+            <!-- Dynamic oracle stream rows inserted here -->
+          </div>
+        </div>
+
+        <p class="data-source">
+          <span id="data-time">The Oracle is synchronized with DexScreener API</span> · Pair: 0x9c6bb77e2af3790e1389c2f8a07084d97b6e0127abadb0d86393b082c8d134f6 · ARC Blockchain.
+        </p>
+      </section>
+
+      <!-- LORE & VISION SECTION -->
+      <section id="lore" class="lore-section" aria-labelledby="lore-title">
+        <div class="lore-story reveal-left">
+          <p class="eyebrow">THE PANTHEON OF ARC</p>
+          <h2 id="lore-title">BEFORE THE BLOCKS,<br><span>THERE WAS THE EYE.</span></h2>
+          <p>
+            When the ARC Blockchain came alive, it summoned Argus Eye to watch over its transactions, validators, and believers. The EYE sees all slippage, all volume, all liquidity flowing through the gates of ARC.
+          </p>
+          <p class="lore-note">
+            "They tried to look away, but the architecture was too sublime. Now, all eyes are on Arc."
+          </p>
+        </div>
+
+        <div class="lore-visual reveal-right parallax-banner-wrap">
+          <img src="assets/all-eyes-banner.png" alt="All eyes on Arc - Pantheon shrine with watchful purple eyes and illuminated Arc symbol" width="2000" height="700" loading="lazy" class="parallax-banner">
+          <span class="visual-label">PANTHEON ARCHIVE // ALL EYES ON ARC</span>
+        </div>
+
+        <div class="reward-note reveal-up stagger-2">
+          <div class="reward-note-col">
+            <p class="eyebrow">THE SENTINEL'S COVENANT</p>
+            <a class="text-link" href="https://dexscreener.com/arc/0x9c6bb77e2af3790e1389c2f8a07084d97b6e0127abadb0d86393b082c8d134f6" target="_blank" rel="noopener noreferrer">
+              Inspect on DexScreener <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="reward-note-col">
+            <h3>YOU HOLD $EYE.<br><span>YOU JOIN THE WATCHFUL FAITHFUL.</span></h3>
+          </div>
+          <div class="reward-note-col">
+            <p>
+              No buy taxes. No sell taxes. Zero team allocation. Simply hold $EYE in any Arc-compatible web3 wallet and be part of the most watchful community across the ecosystem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOKENOMICS SECTION -->
+      <section id="tokenomics" class="tokenomics-section" aria-labelledby="tokenomics-title">
+        <div class="section-heading reveal-up">
+          <p class="eyebrow">ARC TOKEN ARCHITECTURE</p>
+          <h2 id="tokenomics-title">PURE DEFI. <span>ZERO COMPROMISE.</span></h2>
+        </div>
+
+        <div class="tokenomics-grid">
+          <div class="t-card reveal-up stagger-1">
+            <div class="t-card-num">1,000,000,000</div>
+            <div class="t-card-title">TOTAL $EYE SUPPLY</div>
+            <p class="t-card-desc">Fixed maximum supply. No mint function. No inflationary emissions.</p>
+            <div class="t-badge">100% CIRCULATING</div>
+          </div>
+
+          <div class="t-card reveal-up stagger-2">
+            <div class="t-card-num">0% / 0%</div>
+            <div class="t-card-title">TRANSACTION TAX</div>
+            <p class="t-card-desc">0% Tax on Buys and 0% Tax on Sells for completely friction-free community trading.</p>
+            <div class="t-badge badge-accent">ZERO TAXES</div>
+          </div>
+
+          <div class="t-card reveal-up stagger-3">
+            <div class="t-card-num">100%</div>
+            <div class="t-card-title">LIQUIDITY SECURED</div>
+            <p class="t-card-desc">Initial LP tokens paired with ARGUS on Uniswap v4 on ARC.</p>
+            <div class="t-badge">PERMANENTLY SECURE</div>
+          </div>
+
+          <div class="t-card reveal-up stagger-4">
+            <div class="t-card-num">0%</div>
+            <div class="t-card-title">TEAM ALLOCATION</div>
+            <p class="t-card-desc">Zero insider presale, zero founder tokens. Pure community stealth launch.</p>
+            <div class="t-badge">COMMUNITY FIRST</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW TO BUY / GET EYE -->
+      <section class="how-to-buy-section reveal-scale">
+        <div class="htb-container">
+          <div class="htb-copy reveal-left">
+            <p class="eyebrow">JOIN THE GAZE</p>
+            <h2>READY TO OPEN YOUR EYES?</h2>
+            <p>Connect your wallet to the Arc Network, swap for $EYE, and become part of the most watchful community on-chain.</p>
+          </div>
+          <div class="htb-steps">
+            <div class="htb-step reveal-up stagger-1">
+              <span class="step-num">01</span>
+              <h4>Setup Arc Wallet</h4>
+              <p>Add Arc Blockchain RPC to MetaMask, Rabby, or Arc Wallet.</p>
+            </div>
+            <div class="htb-step reveal-up stagger-2">
+              <span class="step-num">02</span>
+              <h4>Get ARGUS / ARC</h4>
+              <p>Bridge or acquire ARGUS tokens to fuel transactions & trades.</p>
+            </div>
+            <div class="htb-step reveal-up stagger-3">
+              <span class="step-num">03</span>
+              <h4>Swap for $EYE</h4>
+              <p>Use DexScreener or Uniswap v4 on Arc, paste the verified CA, and swap.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top reveal-up">
+        <a class="wordmark footer-mark" href="#">
+          <img src="assets/eye-token.png" alt="EYE token" class="footer-token-img">
+          EYE
+        </a>
+        <p class="footer-tagline">ARGUS EYE ($EYE) on ARC. The all-seeing eye of decentralized finance.</p>
+        <div class="footer-links">
+          <a href="https://x.com/i/communities/2032044862334501356" target="_blank" rel="noopener noreferrer">X COMMUNITY ↗</a>
+          <a href="https://dexscreener.com/arc/0x9c6bb77e2af3790e1389c2f8a07084d97b6e0127abadb0d86393b082c8d134f6" target="_blank" rel="noopener noreferrer">DEXSCREENER ↗</a>
+          <a href="https://argus.world/token/0xc87bbFbf5D15b3E1230b5d37cfd43A03d228c79E" target="_blank" rel="noopener noreferrer">ARGUS PORTAL ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>© 2026 ARGUS EYE ($EYE) ON ARC. All eyes on Arc. CA: 0xc87bbFbf5D15b3E1230b5d37cfd43A03d228c79E</small>
+        <div class="footer-disclaimer">Not financial advice. Cryptocurrency trading carries risk.</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="copy-status" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
