@@ -2277,33 +2277,61 @@ footer {
 
 /* 3. Small Tablets & Large Phones (max-width: 768px) */
 @media (max-width: 768px) {
+  /* Disable background noise & floating emojis on mobile */
+  .floating-eyes-bg {
+    display: none !important;
+  }
+  .ambient-glow {
+    opacity: 0.2;
+  }
+
   .header {
-    height: 72px;
+    height: 68px;
     margin: 0 4%;
   }
   .wordmark {
-    font-size: 26px;
+    font-size: 24px;
+    gap: 8px;
+  }
+  .wordmark-icon {
+    width: 28px;
+    height: 28px;
   }
   nav {
-    gap: 14px;
+    gap: 12px;
   }
   .nav-link {
     font-size: 11px;
   }
-  .x-nav {
+  .x-nav,
+  .nav-link[data-nav="lore"],
+  .nav-link[data-nav="tokenomics"],
+  .nav-link[data-nav="sentinel"] {
     display: none;
   }
   .button-small {
-    padding: 7px 12px;
+    padding: 6px 12px;
     font-size: 11px;
   }
+
+  /* Sleek, calm marquee on mobile */
+  .meme-marquee-wrap {
+    padding: 8px 0;
+    background: #090612;
+    border-top: 1px solid rgba(157, 78, 221, 0.2);
+    border-bottom: 1px solid rgba(157, 78, 221, 0.2);
+  }
+  .meme-marquee span {
+    font-size: 11px;
+    gap: 10px;
+  }
   
-  /* Stack hero cleanly */
+  /* Clean, decluttered Hero on mobile */
   .hero {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    padding: 20px 4% 50px;
+    padding: 16px 4% 36px;
     min-height: auto;
     position: relative;
     overflow: hidden;
@@ -2314,16 +2342,19 @@ footer {
     right: auto;
     width: 100%;
     height: auto;
-    max-width: 340px;
-    margin: 10px auto 24px;
+    max-width: 260px;
+    margin: 6px auto 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
   }
   .eye-interactive-wrapper {
-    width: min(78vw, 320px);
-    height: min(78vw, 320px);
+    width: min(58vw, 210px);
+    height: min(58vw, 210px);
+  }
+  .token-glow-halo {
+    inset: -8px;
+    box-shadow: 0 0 25px rgba(157, 78, 221, 0.35);
   }
   .hero-copy {
     width: 100%;
@@ -2335,274 +2366,425 @@ footer {
   }
   .hero .eyebrow {
     justify-content: center;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
   }
   h1 {
-    font-size: clamp(80px, 20vw, 130px);
-    margin: 0 0 14px;
+    font-size: clamp(64px, 17vw, 92px);
+    margin: 0 0 4px;
+    line-height: 0.88;
   }
   .hero-statement {
-    font-size: clamp(24px, 5.5vw, 36px);
+    font-size: clamp(20px, 5.2vw, 26px);
+    line-height: 1.05;
+    margin-bottom: 12px;
   }
   .hero-description {
     padding-top: 0;
-    max-width: 100%;
-    margin: 0 auto 24px;
-    font-size: 15px;
+    max-width: 320px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #a0a6be;
   }
   .hero-actions {
-    justify-content: center;
+    flex-direction: column;
     width: 100%;
+    max-width: 320px;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  .hero-actions .button-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 13px;
+  }
+  .hero-actions .button-quiet {
+    display: none;
   }
   .contract {
     justify-content: center;
-    margin-top: 24px;
+    margin-top: 18px;
+    width: 100%;
+    max-width: 320px;
+    gap: 8px;
+  }
+  .contract-label {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  .copy-address {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+  .contract-explorer {
+    font-size: 10px;
+    padding-left: 8px;
   }
   .hero-caption {
-    position: static;
-    transform: none;
-    margin-top: 24px;
-    text-align: center;
-    justify-content: center;
-    font-size: 18px;
-    right: auto;
-    bottom: auto;
-    left: auto;
-  }
-  .caption-line {
     display: none;
   }
   
-  /* Sentinel Strip */
+  /* Sentinel Strip (Streamlined pill) */
   .reward-strip {
     grid-template-columns: 1fr 1fr;
-    padding: 20px 4%;
-    gap: 16px;
+    padding: 16px 4%;
+    gap: 12px;
+    margin: 0 3%;
+    border-radius: 12px;
+    min-height: auto;
   }
   .strip-lead {
     grid-column: 1 / -1;
-    font-size: 19px;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .strip-star {
+    font-size: 22px;
   }
   .strip-stat {
     border-left: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 12px 0 0;
+    padding: 8px 0 0;
+    text-align: center;
+  }
+  .strip-stat strong {
+    font-size: 18px;
   }
   .strip-link {
     display: none;
   }
   
-  /* Meme Vault */
+  /* Meme Vault (Interactive Swipeable Horizontal Carousel) */
   .meme-vault-section {
-    padding: 50px 4% 40px;
+    padding: 40px 4% 30px;
+  }
+  .meme-vault-section .section-heading {
+    text-align: center;
+  }
+  .meme-vault-section .section-heading h2 {
+    font-size: 26px;
+  }
+  .meme-vault-section .section-sub {
+    font-size: 13px;
+    margin-bottom: 16px;
   }
   .meme-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 8px 4% 18px;
+    margin: 10px -4% 24px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .meme-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .meme-card {
+    flex: 0 0 78%;
+    max-width: 290px;
+    scroll-snap-align: center;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  }
+  .meme-body {
+    padding: 18px;
+  }
+  .meme-body h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .meme-body p {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .meme-meta {
+    padding-top: 10px;
+    font-size: 10px;
+  }
+
+  /* Stare Clicker (Compact & Centered) */
   .stare-clicker-box {
     flex-direction: column;
     text-align: center;
-    padding: 26px 20px;
-    gap: 22px;
+    padding: 22px 18px;
+    gap: 16px;
+    border-radius: 16px;
+  }
+  .stare-info h3 {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+  .stare-info p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .stare-rank {
+    font-size: 11px;
+    padding: 4px 10px;
   }
   .stare-action-zone {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+  }
+  .stare-btn-inner {
+    width: 76px;
+    height: 76px;
+  }
+  .stare-token-img {
+    width: 58px;
+    height: 58px;
+  }
+  .stare-counter {
+    font-size: 30px;
   }
   
-  /* The Oracle */
+  /* The Oracle Section (Decluttered & Clean) */
   .oracle-section,
   .market-section {
-    padding: 45px 4% 20px;
+    padding: 36px 4% 20px;
   }
   .oracle-heading,
   .market-heading {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
-  }
-  .oracle-status-bar {
-    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  .oracle-heading h2 {
+    font-size: 26px;
+  }
+  .oracle-sync {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  
+  /* Streamline Oracle status chips on mobile */
+  .oracle-status-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
   }
   .oracle-chip {
-    padding: 12px 14px;
+    padding: 10px 12px;
   }
-  .market-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .oracle-chip:nth-child(n+3) {
+    display: none; /* Hide duplicate extra chips on mobile for cleanliness */
   }
-  
-  /* Tokenomics */
-  .tokenomics-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .chip-label {
+    font-size: 9px;
   }
-  .t-card-num {
-    font-size: clamp(28px, 8vw, 42px);
-    word-break: break-word;
+  .chip-value {
+    font-size: 13px;
   }
-  
-  /* Footer */
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .footer-links {
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-}
 
-/* 4. Small Mobile Phones (max-width: 520px) */
-@media (max-width: 520px) {
-  .header {
-    height: 64px;
-    margin: 0 3.5%;
-  }
-  .wordmark {
-    font-size: 22px;
-    gap: 6px;
-  }
-  .wordmark-icon {
-    width: 26px;
-    height: 26px;
-  }
-  
-  /* Compact mobile navigation */
-  .nav-link[data-nav="lore"],
-  .nav-link[data-nav="tokenomics"],
-  .nav-link[data-nav="sentinel"] {
-    display: none;
-  }
-  .nav-link {
-    font-size: 11px;
-    letter-spacing: 0.04em;
-  }
-  .button-small {
-    padding: 6px 10px;
-    font-size: 10px;
-  }
-  
-  /* Meme Marquee Ticker */
-  .meme-marquee span {
-    font-size: 11px;
-    gap: 8px;
-  }
-  
-  /* Hero on small screens */
-  h1 {
-    font-size: clamp(68px, 22vw, 100px);
-  }
-  .hero-statement {
-    font-size: 22px;
-    line-height: 1.1;
-  }
-  .hero-description {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .hero-actions {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .hero-actions .button {
-    width: 100%;
-    justify-content: center;
-  }
-  .contract {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  .copy-address {
-    width: 100%;
-    justify-content: center;
-  }
-  .contract-explorer {
-    border-left: 0;
-    padding: 0;
-  }
-  
-  /* Sentinel Strip */
-  .reward-strip {
-    grid-template-columns: 1fr;
-    padding: 18px 4%;
-    gap: 14px;
-  }
-  
-  /* Oracle Status Bar */
-  .oracle-status-bar {
-    grid-template-columns: 1fr;
-  }
-  .timeframe-bar {
-    gap: 6px;
-  }
-  .tf-btn {
-    padding: 5px 10px;
-    font-size: 10px;
-  }
+  /* Market stats under chart */
   .market-stats {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
   }
   .market-stats > div {
-    padding: 12px 10px;
+    padding: 10px 12px;
+  }
+  .market-stats .stat-label {
+    font-size: 9px;
   }
   .market-stats strong {
     font-size: 16px;
   }
-  .payout-facts > div {
+  .market-provenance {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 6px;
+    font-size: 11px;
+    padding: 12px 0 0;
   }
+
+  /* Telemetry aside panel on mobile */
+  .payout-panel {
+    padding: 22px 18px;
+    border-radius: 12px;
+  }
+  .payout-heading {
+    margin-bottom: 12px;
+  }
+  .countdown {
+    font-size: 32px;
+  }
+  .payout-facts {
+    margin: 16px 0;
+    gap: 10px;
+  }
+  .payout-facts > div {
+    padding: 8px 0;
+  }
+  .payout-facts dt,
   .payout-facts dd {
-    text-align: left;
+    font-size: 12px;
+  }
+  .fee-box {
+    margin: 14px 0 10px;
+  }
+  .module-note {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  
+  /* Swap Telemetry Logs */
+  .payout-history {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+  .history-intro h3 {
+    font-size: 18px;
+  }
+  .history-intro p {
+    font-size: 13px;
   }
   .history-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    padding: 10px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  /* Lore Section */
+  .lore-section {
+    padding: 36px 4%;
+    gap: 24px;
+  }
+  .lore-story h2 {
+    font-size: 26px;
+  }
+  .lore-story p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .reward-note {
+    padding: 18px;
+    gap: 14px;
+    border-radius: 12px;
+  }
+  .reward-note-col h3 {
+    font-size: 18px;
+  }
+  .reward-note-col p {
+    font-size: 13px;
   }
   
-  /* Toast position */
-  .toast {
-    left: 4%;
-    right: 4%;
-    transform: translateY(20px);
-    width: auto;
-    font-size: 12px;
-    padding: 10px 16px;
+  /* Tokenomics Grid (Clean 2x2 on mobile) */
+  .tokenomics-section {
+    padding: 36px 4%;
   }
-  .toast.visible {
-    transform: translateY(0);
+  .tokenomics-section .section-heading h2 {
+    font-size: 26px;
+  }
+  .tokenomics-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .t-card {
+    padding: 18px 14px;
+    border-radius: 12px;
+  }
+  .t-card-num {
+    font-size: clamp(20px, 5.5vw, 28px);
+    margin-bottom: 4px;
+  }
+  .t-card-title {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .t-card-desc {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .t-badge {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+
+  /* How to buy */
+  .how-to-buy-section {
+    padding: 24px 4% 40px;
+  }
+  .htb-container {
+    padding: 24px 18px;
+    gap: 20px;
+  }
+  .htb-copy h2 {
+    font-size: 24px;
+    margin: 6px 0 10px;
+  }
+  .htb-copy p {
+    font-size: 13px;
+  }
+  .htb-step {
+    padding: 16px 14px;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 36px 4% 30px;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .footer-brand p {
+    font-size: 13px;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-links a {
+    font-size: 12px;
+  }
+  .footer-bottom {
+    margin-top: 24px;
+    padding-top: 18px;
+    font-size: 11px;
   }
 }
 
-/* 5. Extra Small / Foldables (max-width: 360px) */
-@media (max-width: 360px) {
+/* 4. Extra Small Phones (max-width: 400px) */
+@media (max-width: 400px) {
   .wordmark {
-    font-size: 19px;
+    font-size: 20px;
   }
   h1 {
-    font-size: 60px;
+    font-size: 56px;
   }
   .hero-statement {
-    font-size: 19px;
+    font-size: 18px;
+  }
+  .tokenomics-grid {
+    grid-template-columns: 1fr;
+  }
+  .oracle-status-bar {
+    grid-template-columns: 1fr;
   }
   .stare-counter {
-    font-size: 28px;
+    font-size: 26px;
   }
   .stare-btn-inner {
-    width: 74px;
-    height: 74px;
+    width: 68px;
+    height: 68px;
   }
   .stare-token-img {
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
   }
 }
+
 
 
